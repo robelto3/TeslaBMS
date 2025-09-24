@@ -468,7 +468,7 @@ void BMSModuleManager::processCANMsg(CAN_FRAME &frame)
     uint8_t moduleId = (frame.id >> 8) & 0xFF;
     uint8_t cellId = (frame.id) & 0xFF;
     
-    if (moduleId = 0xFF)  //every module
+    if (moduleId == 0xFF)  //every module
     {
         if (cellId == 0xFF) sendBatterySummary();        
         else 
